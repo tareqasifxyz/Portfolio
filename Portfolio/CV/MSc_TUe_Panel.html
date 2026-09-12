@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MSc Electrical Engineering</title>
+</head>
+
+<body>
+
+    <div data-name="MSc_TUe_Panel">
+
+        <style>
+
+            /* =========================================================
+               MSc_TUe_Panel
+               Self-contained component CSS
+               ========================================================= */
+
+            [data-name="MSc_TUe_Panel"] {
+                width: 100%;
+                min-height: 100vh;
+                display: grid;
+                place-items: center;
+                padding: 40px;
+                background: #f3f5f7;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #17202a;
+                box-sizing: border-box;
+            }
+
+
+                /* ---------- Main Card ---------- */
+
+                [data-name="MSc_TUe_Panel"] .education-card {
+                    width: min(100%, 700px);
+                    display: grid;
+                    grid-template-columns: 90px 1fr;
+                    background: #ffffff;
+                    border: 1px solid #e1e5e8;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                    box-sizing: border-box;
+                }
+
+
+                /* ---------- Left Side ---------- */
+
+                [data-name="MSc_TUe_Panel"] .card-side {
+                    display: grid;
+                    place-items: center;
+                    background: #17202a;
+                    color: #ffffff;
+                    font-size: 20px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                }
+
+
+                /* ---------- Main Content ---------- */
+
+                [data-name="MSc_TUe_Panel"] .card-content {
+                    display: grid;
+                    gap: 24px;
+                    padding: 30px;
+                    min-width: 0;
+                    box-sizing: border-box;
+                }
+
+
+                /* ---------- Degree Information ---------- */
+
+                [data-name="MSc_TUe_Panel"] .degree-section {
+                    display: grid;
+                    gap: 8px;
+                }
+
+
+                    [data-name="MSc_TUe_Panel"] .degree-section h1 {
+                        font-size: 26px;
+                        line-height: 1.25;
+                        font-weight: 700;
+                    }
+
+
+                [data-name="MSc_TUe_Panel"] .university {
+                    font-size: 17px;
+                    color: #5f6b76;
+                }
+
+
+                [data-name="MSc_TUe_Panel"] .location {
+                    font-size: 14px;
+                    color: #7a858f;
+                }
+
+
+                /* ---------- Divider ---------- */
+
+                [data-name="MSc_TUe_Panel"] .divider {
+                    height: 1px;
+                    width: 100%;
+                    background: #e8ebed;
+                }
+
+
+                /* ---------- Subjects ---------- */
+
+                [data-name="MSc_TUe_Panel"] .subjects-section {
+                    display: grid;
+                    gap: 14px;
+                }
+
+
+                [data-name="MSc_TUe_Panel"] .subjects-title {
+                    font-size: 13px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    color: #7a858f;
+                }
+
+
+                /* ---------- Subjects Grid ---------- */
+
+                [data-name="MSc_TUe_Panel"] .subjects-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 10px;
+                }
+
+
+                /* ---------- Individual Subject ---------- */
+
+                [data-name="MSc_TUe_Panel"] .subject {
+                    display: grid;
+                    grid-template-columns: 8px 1fr;
+                    align-items: center;
+                    gap: 12px;
+                    min-height: 58px;
+                    padding: 12px 14px;
+                    background: #f7f8f9;
+                    border: 1px solid #e8ebed;
+                    border-radius: 10px;
+                    font-size: 14px;
+                    line-height: 1.4;
+                    transition: transform 0.2s ease, box-shadow 0.2s ease;
+                    box-sizing: border-box;
+                }
+
+
+                    [data-name="MSc_TUe_Panel"] .subject:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+                    }
+
+
+                /* ---------- Subject Marker ---------- */
+
+                [data-name="MSc_TUe_Panel"] .subject-marker {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: #17202a;
+                }
+
+
+            /* =========================================================
+               Mobile
+               ========================================================= */
+
+            @media (max-width: 600px) {
+
+                [data-name="MSc_TUe_Panel"] {
+                    padding: 20px;
+                }
+
+
+                    [data-name="MSc_TUe_Panel"] .education-card {
+                        grid-template-columns: 1fr;
+                    }
+
+
+                    [data-name="MSc_TUe_Panel"] .card-side {
+                        min-height: 70px;
+                    }
+
+
+                    [data-name="MSc_TUe_Panel"] .card-content {
+                        padding: 24px;
+                    }
+
+
+                    [data-name="MSc_TUe_Panel"] .degree-section h1 {
+                        font-size: 22px;
+                    }
+
+
+                    [data-name="MSc_TUe_Panel"] .subjects-grid {
+                        grid-template-columns: 1fr;
+                    }
+            }
+        </style>
+
+
+        <!-- =========================================================
+             Main Education Card
+             ========================================================= -->
+
+        <main class="education-card">
+
+
+            <!-- Card Label -->
+
+            <aside class="card-side">
+                MSc
+            </aside>
+
+
+            <!-- Card Content -->
+
+            <section class="card-content">
+
+
+                <!-- Degree Information -->
+
+                <div class="degree-section">
+
+                    <h1>
+                        Masters in Electrical Engineering
+                    </h1>
+
+                    <p class="university">
+                        Eindhoven University of Technology (TU/e)
+                    </p>
+
+                    <p class="location">
+                        📍 Eindhoven, Netherlands
+                    </p>
+
+                </div>
+
+
+                <!-- Divider -->
+
+                <div class="divider"></div>
+
+
+                <!-- Core Subjects -->
+
+                <div class="subjects-section">
+
+                    <h2 class="subjects-title">
+                        Core Subjects
+                    </h2>
+
+
+                    <div class="subjects-grid">
+
+
+                        <div class="subject">
+
+                            <span class="subject-marker"></span>
+
+                            <span>
+                                Non-linear control systems
+                            </span>
+
+                        </div>
+
+
+                        <div class="subject">
+
+                            <span class="subject-marker"></span>
+
+                            <span>
+                                Electrical Machines and Drives control
+                            </span>
+
+                        </div>
+
+
+                        <div class="subject">
+
+                            <span class="subject-marker"></span>
+
+                            <span>
+                                Power system stability control
+                            </span>
+
+                        </div>
+
+
+                        <div class="subject">
+
+                            <span class="subject-marker"></span>
+
+                            <span>
+                                Power electronics, FACTS and HVDC control
+                            </span>
+
+                        </div>
+
+
+                        <div class="subject">
+
+                            <span class="subject-marker"></span>
+
+                            <span>
+                                Smart grid &amp; Renewable energy
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

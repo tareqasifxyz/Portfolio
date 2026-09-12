@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Details</title>
+</head>
+
+<body>
+
+    <div data-name="ProjectDetailsPanel">
+
+        <style>
+            [data-name="ProjectDetailsPanel"] {
+                width: min(100%, 900px);
+                margin: auto;
+                background: white;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 12px 30px rgba(15, 23, 42, 0.10);
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                color: #172033;
+            }
+
+            @media (max-width: 650px) {
+                [data-name="ProjectDetailsPanel"] {
+                    width: 100%;
+                }
+            }
+        </style>
+
+
+        <div data-name="Title">
+
+            <style>
+                [data-name="Title"] {
+                    padding: 30px 32px 12px;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 1.2;
+                }
+
+                @media (max-width: 650px) {
+                    [data-name="Title"] {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                }
+            </style>
+
+            PID controller project
+
+        </div>
+
+
+        <div data-name="Summary">
+
+            <style>
+                [data-name="Summary"] {
+                    padding: 0 32px 28px;
+                    color: #64748b;
+                    font-size: 1rem;
+                    line-height: 1.7;
+                }
+
+                @media (max-width: 650px) {
+                    [data-name="Summary"] {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                }
+            </style>
+
+            A PID controller is very important in process automation industry.
+
+        </div>
+
+
+        <div data-name="Container_of_Images">
+
+            <style>
+                [data-name="Container_of_Images"] {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 16px;
+                    padding: 0 32px 28px;
+                }
+
+                    [data-name="Container_of_Images"] img {
+                        display: block;
+                        width: 100%;
+                        aspect-ratio: 16 / 10;
+                        object-fit: cover;
+                        border-radius: 14px;
+                    }
+
+                @media (max-width: 650px) {
+                    [data-name="Container_of_Images"] {
+                        grid-template-columns: 1fr;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                }
+            </style>
+
+
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+                 alt="Electronic circuit board">
+
+            <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=900&q=80"
+                 alt="Technology project">
+
+        </div>
+
+
+        <div data-name="Container_of_Tags">
+
+            <style>
+                [data-name="Container_of_Tags"] {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    padding: 22px 32px 30px;
+                    border-top: 1px solid #e2e8f0;
+                    background: #fafcff;
+                }
+
+                    [data-name="Container_of_Tags"] span {
+                        padding: 8px 14px;
+                        border-radius: 999px;
+                        background: #e8f0ff;
+                        color: #2563eb;
+                        font-size: 0.9rem;
+                        font-weight: 600;
+                    }
+
+                @media (max-width: 650px) {
+                    [data-name="Container_of_Tags"] {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                }
+            </style>
+
+
+            <span>Controller</span>
+            <span>Dynamic</span>
+            <span>Simulink</span>
+
+            <span>Controller</span>
+            <span>Dynamic</span>
+            <span>Simulink</span>
+
+            <span>Controller</span>
+            <span>Dynamic</span>
+            <span>Simulink</span>
+
+        </div>
+
+    </div>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 40px 20px;
+            background: #f4f7fb;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 20px 12px;
+            }
+        }
+    </style>
+
+</body>
+</html>

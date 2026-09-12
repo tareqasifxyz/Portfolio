@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Panel</title>
+</head>
+
+<body>
+
+    <div data-name="HeaderPanel">
+
+        <style>
+            [data-name="HeaderPanel"] {
+                width: 100%;
+                min-height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 30px;
+                background: #ffffff;
+                border-bottom: 1px solid #e2e8f0;
+                box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+                box-sizing: border-box;
+                font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                color: #172033;
+            }
+
+            [data-name="CV"],
+            [data-name="Projects"],
+            [data-name="Contact"] {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 24px;
+                font-size: 1rem;
+                font-weight: 600;
+                white-space: nowrap;
+                cursor: pointer;
+                box-sizing: border-box;
+            }
+
+                [data-name="CV"]:hover,
+                [data-name="Projects"]:hover,
+                [data-name="Contact"]:hover {
+                    color: #2563eb;
+                }
+
+            @media (max-width: 600px) {
+
+                [data-name="HeaderPanel"] {
+                    padding: 12px;
+                }
+
+                [data-name="CV"],
+                [data-name="Projects"],
+                [data-name="Contact"] {
+                    padding: 8px 12px;
+                    font-size: 0.9rem;
+                }
+            }
+        </style>
+
+        <div data-name="CV">
+            CV
+        </div>
+
+        <div data-name="Projects">
+            Projects
+        </div>
+
+        <div data-name="Contact">
+            Contact
+        </div>
+
+    </div>
+
+</body>
+</html>

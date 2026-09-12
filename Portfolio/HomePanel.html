@@ -1,0 +1,250 @@
+﻿```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio of Tareq</title>
+
+    <style>
+        /* ---------- Page ---------- */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 40px;
+            background: #f3f5f7;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #17202a;
+        }
+
+
+        /* ---------- Main Container ---------- */
+
+        .page {
+            width: min(100%, 900px);
+            margin: 0 auto;
+            display: grid;
+            gap: 24px;
+        }
+
+
+        /* ---------- Website Title ---------- */
+
+        .website-title {
+            padding: 30px;
+            background: #ffffff;
+            border: 1px solid #e1e5e8;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+            .website-title h1 {
+                font-size: 32px;
+                line-height: 1.25;
+                font-weight: 700;
+            }
+
+
+        /* ---------- CV Block ---------- */
+
+        .cv-block {
+            padding: 24px 30px;
+            background: #ffffff;
+            border: 1px solid #e1e5e8;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+            .cv-block h2 {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .cv-block a {
+                color: #17202a;
+                text-decoration: none;
+            }
+
+                .cv-block a:hover {
+                    text-decoration: underline;
+                }
+
+
+        /* ---------- Projects Block ---------- */
+
+        .projects-block {
+            padding: 30px;
+            background: #ffffff;
+            border: 1px solid #e1e5e8;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+            .projects-block h2 {
+                margin-bottom: 20px;
+                font-size: 22px;
+                font-weight: 700;
+            }
+
+
+        /* ---------- Project Grid ---------- */
+
+        .projects-grid {
+            display: grid;
+            /*
+             * Cards automatically fit horizontally
+             * when there is enough space.
+             * Otherwise, they move to the next row.
+             */
+            grid-template-columns: repeat( auto-fit, minmax(180px, 1fr) );
+            gap: 14px;
+        }
+
+
+        /* ---------- Project Card ---------- */
+
+        .project-card {
+            display: grid;
+            place-items: center;
+            min-height: 120px;
+            padding: 20px;
+            background: #f7f8f9;
+            border: 1px solid #e8ebed;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+            .project-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            }
+
+
+        /* ---------- Mobile ---------- */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px;
+            }
+
+            .website-title,
+            .cv-block,
+            .projects-block {
+                padding: 24px;
+            }
+
+                .website-title h1 {
+                    font-size: 26px;
+                }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <main class="page">
+
+        <!-- Website Title -->
+        <header class="website-title">
+            <h1>Portfolio of Tareq</h1>
+        </header>
+
+
+        <!-- CV Link -->
+        <section class="cv-block">
+
+            <h2>
+                <a href="cv.html">
+                    For CV Page click here
+                </a>
+            </h2>
+
+        </section>
+
+
+        <!-- Projects -->
+        <section class="projects-block">
+
+            <h2>Projects:</h2>
+
+            <div id="projects-grid"
+                 class="projects-grid">
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        /*
+         * Dummy project data.
+         *
+         * Later, this data can be replaced with
+         * data coming from another source.
+         */
+
+        const projects = [
+            {
+                title: "Project 1"
+            },
+            {
+                title: "Project 2"
+            },
+            {
+                title: "Project 3"
+            },
+            {
+                title: "Project 4"
+            }
+        ];
+
+
+        /*
+         * Find the project grid in the HTML.
+         */
+
+        const projectsGrid =
+            document.getElementById("projects-grid");
+
+
+        /*
+         * Populate the project grid
+         * using the data above.
+         */
+
+        projects.forEach(project =>
+        {
+
+            const card =
+                document.createElement("div");
+
+            card.className = "project-card";
+
+            card.textContent = project.title;
+
+            projectsGrid.appendChild(card);
+
+        });
+
+    </script>
+
+</body>
+</html>
+```

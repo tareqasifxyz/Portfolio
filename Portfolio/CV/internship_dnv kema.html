@@ -1,0 +1,228 @@
+﻿```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LabVIEW Programming Intern</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 40px;
+            background: #f3f5f7;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #17202a;
+        }
+
+
+        /* ---------- Main Card ---------- */
+
+        .experience-card {
+            width: min(100%, 680px);
+            display: grid;
+            grid-template-columns: 95px 1fr;
+            background: #ffffff;
+            border: 1px solid #e1e5e8;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* ---------- Left Label ---------- */
+
+        .card-side {
+            display: grid;
+            place-items: center;
+            padding: 20px;
+            background: #17202a;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+
+        /* ---------- Content ---------- */
+
+        .card-content {
+            display: grid;
+            gap: 22px;
+            padding: 30px;
+        }
+
+
+        /* ---------- Position ---------- */
+
+        .position-section {
+            display: grid;
+            gap: 8px;
+        }
+
+            .position-section h1 {
+                font-size: 25px;
+                line-height: 1.25;
+                font-weight: 700;
+            }
+
+        .company {
+            font-size: 17px;
+            line-height: 1.5;
+            color: #5f6b76;
+        }
+
+        .location {
+            font-size: 14px;
+            color: #7a858f;
+        }
+
+
+        /* ---------- Divider ---------- */
+
+        .divider {
+            height: 1px;
+            background: #e8ebed;
+        }
+
+
+        /* ---------- Project ---------- */
+
+        .project-section {
+            display: grid;
+            gap: 10px;
+        }
+
+        .project-label {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #7a858f;
+        }
+
+        .project {
+            display: grid;
+            grid-template-columns: 8px 1fr;
+            align-items: start;
+            gap: 12px;
+            padding: 16px;
+            background: #f7f8f9;
+            border: 1px solid #e8ebed;
+            border-radius: 10px;
+        }
+
+        .project-marker {
+            width: 8px;
+            height: 8px;
+            margin-top: 6px;
+            border-radius: 50%;
+            background: #17202a;
+        }
+
+        .project-text {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #34495e;
+        }
+
+
+        /* ---------- Mobile ---------- */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px;
+            }
+
+            .experience-card {
+                grid-template-columns: 1fr;
+            }
+
+            .card-side {
+                min-height: 70px;
+            }
+
+            .card-content {
+                padding: 24px;
+            }
+
+            .position-section h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <main class="experience-card">
+
+        <!-- Card label -->
+        <aside class="card-side">
+            Intern
+        </aside>
+
+
+        <!-- Card content -->
+        <section class="card-content">
+
+            <!-- Position -->
+            <div class="position-section">
+
+                <h1>
+                    LabVIEW Programming Intern
+                </h1>
+
+                <p class="company">
+                    DNV KEMA
+                </p>
+
+                <p class="location">
+                    📍 Arnhem, Netherlands
+                </p>
+
+            </div>
+
+
+            <!-- Divider -->
+            <div class="divider"></div>
+
+
+            <!-- Project -->
+            <div class="project-section">
+
+                <p class="project-label">
+                    Project / Responsibility
+                </p>
+
+                <div class="project">
+
+                    <span class="project-marker"></span>
+
+                    <p class="project-text">
+                        Time Domain Reflectometry based algorithm design
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
+```

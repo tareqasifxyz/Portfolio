@@ -1,0 +1,153 @@
+﻿```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Driving License</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 40px;
+            background: #f3f5f7;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #17202a;
+        }
+
+
+        /* ---------- Main Card ---------- */
+
+        .license-card {
+            width: min(100%, 500px);
+            display: grid;
+            grid-template-columns: 85px 1fr;
+            background: #ffffff;
+            border: 1px solid #e1e5e8;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* ---------- Left Label ---------- */
+
+        .card-side {
+            display: grid;
+            place-items: center;
+            background: #17202a;
+            color: #ffffff;
+            font-size: 28px;
+        }
+
+
+        /* ---------- Content ---------- */
+
+        .card-content {
+            display: grid;
+            gap: 12px;
+            padding: 24px 28px;
+        }
+
+
+        /* ---------- Title ---------- */
+
+        .card-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #7a858f;
+        }
+
+
+        /* ---------- License ---------- */
+
+        .license {
+            display: grid;
+            grid-template-columns: 8px 1fr;
+            align-items: center;
+            gap: 12px;
+            padding: 14px;
+            background: #f7f8f9;
+            border: 1px solid #e8ebed;
+            border-radius: 10px;
+        }
+
+        .license-marker {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #17202a;
+        }
+
+        .license-text {
+            font-size: 15px;
+            font-weight: 600;
+            color: #34495e;
+        }
+
+
+        /* ---------- Mobile ---------- */
+
+        @media (max-width: 500px) {
+
+            body {
+                padding: 20px;
+            }
+
+            .license-card {
+                grid-template-columns: 1fr;
+            }
+
+            .card-side {
+                min-height: 65px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <main class="license-card">
+
+        <!-- Card icon -->
+        <aside class="card-side">
+            🚗
+        </aside>
+
+
+        <!-- Card content -->
+        <section class="card-content">
+
+            <h1 class="card-title">
+                Driving License
+            </h1>
+
+            <div class="license">
+
+                <span class="license-marker"></span>
+
+                <p class="license-text">
+                    Car driving license (B)
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
+```

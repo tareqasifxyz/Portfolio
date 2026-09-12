@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PID Controller Project</title>
+</head>
+
+<body>
+
+    <div data-name="ProjectSummaryPanel">
+
+        <style>
+            [data-name="ProjectSummaryPanel"] {
+                width: min(100%, 900px);
+                margin: 0 auto;
+                background: white;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 12px 30px rgba(15, 23, 42, 0.10);
+                font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                color: #172033;
+            }
+
+            @media (max-width: 600px) {
+                [data-name="ProjectSummaryPanel"] {
+                    width: 100%;
+                }
+            }
+        </style>
+
+
+        <!-- =====================================================
+             DIV_Object
+             ===================================================== -->
+
+        <div data-name="Title">
+
+            <style>
+                [data-name="Title"] {
+                    padding: 28px 32px 24px;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 1.2;
+                }
+
+                @media (max-width: 600px) {
+                    [data-name="Title"] {
+                        padding: 22px 20px;
+                        font-size: 1.6rem;
+                    }
+                }
+            </style>
+
+            PID controller project
+
+        </div>
+
+
+        <!-- =====================================================
+             DIV_Panel
+             Container_of_Images
+             ===================================================== -->
+
+        <div data-name="Container_of_Images">
+
+            <style>
+                [data-name="Container_of_Images"] {
+                    position: relative;
+                    width: 100%;
+                    height: 400px;
+                    overflow: hidden;
+                }
+
+                    [data-name="Container_of_Images"] img {
+                        position: absolute;
+                        inset: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        opacity: 0;
+                        animation: imageCarousel 2s infinite;
+                    }
+
+                        [data-name="Container_of_Images"] img:nth-child(1) {
+                            animation-delay: 0s;
+                        }
+
+                        [data-name="Container_of_Images"] img:nth-child(2) {
+                            animation-delay: 1s;
+                        }
+
+                @keyframes imageCarousel {
+                    0% {
+                        opacity: 0;
+                    }
+
+                    5% {
+                        opacity: 1;
+                    }
+
+                    45% {
+                        opacity: 1;
+                    }
+
+                    50% {
+                        opacity: 0;
+                    }
+
+                    100% {
+                        opacity: 0;
+                    }
+                }
+
+                @media (max-width: 600px) {
+                    [data-name="Container_of_Images"] {
+                        height: 280px;
+                    }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+                    [data-name="Container_of_Images"] img {
+                        animation: none;
+                    }
+
+                        [data-name="Container_of_Images"] img:first-child {
+                            opacity: 1;
+                        }
+                }
+            </style>
+
+
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+                 alt="Electronic circuit board">
+
+            <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=900&q=80"
+                 alt="Technology project">
+
+        </div>
+
+
+        <!-- =====================================================
+             DIV_Panel
+             Container_of_Tags
+             ===================================================== -->
+
+        <div data-name="Container_of_Tags">
+
+            <style>
+                [data-name="Container_of_Tags"] {
+                    position: relative;
+                    overflow: hidden;
+                    padding: 20px 0;
+                    border-top: 1px solid #e2e8f0;
+                    background: #fafcff;
+                }
+
+                    [data-name="Container_of_Tags"] .tag-track {
+                        display: flex;
+                        width: max-content;
+                        gap: 12px;
+                        animation: tagMarquee 12s linear infinite;
+                    }
+
+                    [data-name="Container_of_Tags"] .tag {
+                        flex-shrink: 0;
+                        padding: 8px 15px;
+                        border-radius: 999px;
+                        background: #e8f0ff;
+                        color: #2563eb;
+                        font-size: 0.9rem;
+                        font-weight: 600;
+                    }
+
+                @keyframes tagMarquee {
+                    from {
+                        transform: translateX(0);
+                    }
+
+                    to {
+                        transform: translateX(-50%);
+                    }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+                    [data-name="Container_of_Tags"] .tag-track {
+                        animation: none;
+                    }
+                }
+            </style>
+
+
+            <div class="tag-track">
+
+                <span class="tag">Controller</span>
+                <span class="tag">Dynamic</span>
+                <span class="tag">Simulink</span>
+
+                <span class="tag">Controller</span>
+                <span class="tag">Dynamic</span>
+                <span class="tag">Simulink</span>
+
+                <span class="tag">Controller</span>
+                <span class="tag">Dynamic</span>
+                <span class="tag">Simulink</span>
+
+
+                <!-- Duplicate set for seamless scrolling -->
+
+                <span class="tag">Controller</span>
+                <span class="tag">Dynamic</span>
+                <span class="tag">Simulink</span>
+
+                <span class="tag">Controller</span>
+                <span class="tag">Dynamic</span>
+                <span class="tag">Simulink</span>
+
+                <span class="tag">Controller</span>
+                <span class="tag">Dynamic</span>
+                <span class="tag">Simulink</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 40px 20px;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f4f7fb;
+            color: #172033;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 12px;
+            }
+        }
+    </style>
+
+</body>
+</html>

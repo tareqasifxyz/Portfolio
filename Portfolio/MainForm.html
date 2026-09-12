@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PID Controller Project</title>
+</head>
+
+<body>
+
+    <div data-name="MainForm">
+
+        <style>
+            [data-name="MainForm"] {
+                width: 100%;
+                min-height: 100vh;
+                margin: 0;
+                padding: 20px;
+                box-sizing: border-box;
+                font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                background: #f4f7fb;
+                color: #172033;
+            }
+        </style>
+
+        <div data-name="Grid">
+
+            <style>
+                [data-name="Grid"] {
+                    display: grid;
+                    grid-template-columns: repeat(1, minmax(0, 1fr));
+                    grid-template-rows: repeat(2, auto);
+                    width: 100%;
+                    min-width: 0;
+                    gap: 20px;
+                }
+            </style>
+
+            <div data-name="cell11"
+                 style="
+                    grid-row: 1;
+                    grid-column: 1;
+                ">
+
+                <div data-name="Title">
+
+                    <style>
+                        [data-name="Title"] {
+                            width: 100%;
+                            font-size: 2rem;
+                            font-weight: 700;
+                            line-height: 1.2;
+                            text-align: center;
+                        }
+                    </style>
+
+                    PID controller project
+
+                </div>
+
+            </div>
+
+
+            <div data-name="cell21"
+                 style="
+                    grid-row: 2;
+                    grid-column: 1;
+                ">
+
+                <div data-name="Summary">
+
+                    <style>
+                        [data-name="Summary"] {
+                            width: 100%;
+                            color: #64748b;
+                            font-size: 1rem;
+                            line-height: 1.7;
+                            text-align: center;
+                        }
+                    </style>
+
+                    A PID controller is very important in process automation industry.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            background: #f4f7fb;
+        }
+
+
+        [data-name="cell11"],
+        [data-name="cell21"] {
+            width: 100%;
+            min-width: 0;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+        }
+
+
+        @media (max-width: 700px) {
+
+            [data-name="MainForm"] {
+                padding: 10px;
+            }
+
+            [data-name="Grid"] {
+                gap: 10px;
+            }
+
+            [data-name="cell11"],
+            [data-name="cell21"] {
+                padding: 16px;
+            }
+
+            [data-name="Title"] {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+
+</body>
+</html>

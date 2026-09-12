@@ -1,0 +1,219 @@
+﻿```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Workshops</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 40px;
+            background: #f3f5f7;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #17202a;
+        }
+
+
+        /* ---------- Main Card ---------- */
+
+        .workshop-card {
+            width: min(100%, 680px);
+            display: grid;
+            grid-template-columns: 90px 1fr;
+            background: #ffffff;
+            border: 1px solid #e1e5e8;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* ---------- Left Label ---------- */
+
+        .card-side {
+            display: grid;
+            place-items: center;
+            padding: 20px;
+            background: #17202a;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+
+        /* ---------- Content ---------- */
+
+        .card-content {
+            display: grid;
+            gap: 18px;
+            padding: 28px 30px;
+        }
+
+
+        /* ---------- Heading ---------- */
+
+        .card-title {
+            font-size: 24px;
+            line-height: 1.25;
+            font-weight: 700;
+        }
+
+        .card-subtitle {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #7a858f;
+        }
+
+
+        /* ---------- Workshop Grid ---------- */
+
+        .workshops-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+        }
+
+
+        /* ---------- Workshop Item ---------- */
+
+        .workshop {
+            display: grid;
+            grid-template-columns: 8px 1fr;
+            align-items: start;
+            gap: 12px;
+            min-height: 75px;
+            padding: 15px;
+            background: #f7f8f9;
+            border: 1px solid #e8ebed;
+            border-radius: 10px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+            .workshop:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+            }
+
+
+        /* ---------- Marker ---------- */
+
+        .workshop-marker {
+            width: 8px;
+            height: 8px;
+            margin-top: 6px;
+            border-radius: 50%;
+            background: #17202a;
+        }
+
+
+        /* ---------- Workshop Text ---------- */
+
+        .workshop-name {
+            font-size: 14px;
+            line-height: 1.5;
+            font-weight: 600;
+            color: #34495e;
+        }
+
+
+        /* ---------- Mobile ---------- */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px;
+            }
+
+            .workshop-card {
+                grid-template-columns: 1fr;
+            }
+
+            .card-side {
+                min-height: 70px;
+            }
+
+            .card-content {
+                padding: 24px;
+            }
+
+            .card-title {
+                font-size: 22px;
+            }
+
+            .workshops-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <main class="workshop-card">
+
+        <!-- Card label -->
+        <aside class="card-side">
+            Training
+        </aside>
+
+
+        <!-- Card content -->
+        <section class="card-content">
+
+            <h1 class="card-title">
+                Workshops
+            </h1>
+
+            <p class="card-subtitle">
+                Technical Workshops
+            </p>
+
+
+            <!-- Workshop Grid -->
+            <div class="workshops-grid">
+
+                <div class="workshop">
+
+                    <span class="workshop-marker"></span>
+
+                    <p class="workshop-name">
+                        Sigmatek PLC Programming &amp; HMI Design
+                    </p>
+
+                </div>
+
+
+                <div class="workshop">
+
+                    <span class="workshop-marker"></span>
+
+                    <p class="workshop-name">
+                        ABB IRC5 Robot Controller Programming
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
+```
